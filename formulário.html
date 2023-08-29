@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário | ST</title>
+
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #aa00ff, #550080);
+        }
+
+        .box {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color:rgba(0, 0, 0, 0.705);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        fieldset {
+            border: 3px solid #AA00FF;
+        }
+
+        legend {
+            border: 1px solid #AA00FF;
+            padding: 10px;
+            text-align: center;
+            background-color: #AA00FF;
+            border-radius: 9px;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            letter-spacing: 2px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: #C44DFF;
+        }
+
+        #date {
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: auto;
+            font-size: 15px;
+        }
+        
+        #submit {
+            background-image: linear-gradient(to right, #AA00FF, #550080);
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        #submit:hover {
+            background-image: linear-gradient(to right, #7100aa, #3b0058);
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        
+        footer > a:hover {
+            color: white;
+            text-decoration:dashed
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend>
+                    <b>Formulário para Funcionários </b>
+                    <br>
+                </legend>
+                <div class="inputBox">
+                    <input type="text" name="name" id="name" class="inputUser" required>
+                    <label for="email" class="labelInput" >Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput" >Email</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="cpf" class="inputUser" required>
+                    <label for="nome" class="labelInput" >CPF</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="number" name="numero" id="numero" class="inputUser" required>
+                    <label for="nome" class="labelInput" >Telefone</label>
+                </div>
+                <br>
+                <p>
+                    sexo:
+                </p>
+                <div class="inputBox">
+                    <input type="radio" name="genero" value="Masculino" id="masc">
+                    <label for="Masculino">Masculino</label>
+                    <br>
+                    <input type="radio" name="genero" value="Feminino" id="fem">
+                    <label for="Feminino">Feminino</label>
+                    <br>
+                    <input type="radio" name="genero" value="outro" id="outo">
+                    <label for="Outro">Outro</label>
+                </div>
+                <br><br>
+
+                    <label for="data"><b>Data de Nascimento</b></label>
+                    <input type="date" name="date" id="date" required>
+
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                    <label for="nome" class="labelInput" >Cidade</label>
+                </div><br>
+                <br>
+
+                <div class="inputBox">
+                    <input type="text" name="estado" id="estado" class="inputUser" required>
+                    <label for="estado" class="labelInput" >Estado</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="text" name="numero" id="numero" class="inputUser" required>
+                    <label for="nome" class="labelInput" >Endereço</label>
+                </div>
+                <br><br>
+
+                <input type="submit" name="Enviar" id="submit" onclick="verificar()">
+    
+            </fieldset>
+        </form>
+    </div>
+
+    <footer>Developed by <a href="https://twitter.com/sthevinnn" target="_blank">sthevaolol</a></footer>
+
+
+    <script> 
+
+    function verificar() {
+        var nome = document.getElementById('name')
+          const nome1 = (nome.value)
+        var email = document.getElementById('email')
+          const email1 = (email.value)
+        var cpf = document.getElementById('cpf')
+          const cpf1 = (cpf.value)
+        var tel = document.getElementById('numero')
+          const tel1 = (cpf.value)
+        var sexo = document.getElementById('')
+        var data = document.getElementById('date')
+          const date1 = (date.value)
+        var cidade = document.getElementById('cidade')
+          const cidade1 = (cidade.value)
+        var estado = document.getElementById('estado')
+          const estado1 = (estado.value)
+        var endereco = document.getElementById('endereco')
+          const endereco1 = (endereco.value)
+    }
+        
+    </script>
+
+    
+</body>
+</html>
